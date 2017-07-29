@@ -1,0 +1,51 @@
+﻿<div class="container">
+    <h1 class="text-center">Alterar Prato</h1>
+    <form class="form-horizontal" (submit)="alterar($event)">
+        <div class="row">
+            <div class="form-group">
+                <label class="col-md-1 text-right">ID</label>
+                <div class="col-md-3">
+                    <input name="id" [(ngModel)]="prato.Id_Prato" type="text" class="form-control" value="{{prato.Id_Prato}}" readonly="true">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="col-md-1 text-right">Nome</label>
+                <div class="col-md-3">
+                    <input name="nome" [(ngModel)]="prato.Nome_Prato" type="text" class="form-control" value="{{prato.Nome_Prato}}">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="col-md-1 text-right">Preço</label>
+                <div class="col-md-3">
+                    <input name="preco" [(ngModel)]="prato.Preco_Prato" type="text" class="form-control" value="{{prato.Preco_Prato}}">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="col-md-1 text-right">Restaurante</label>
+                <div class="col-md-3">
+                    <select name="comboRestaurante" [(ngModel)]="prato.Id_Restaurante" class="form-control">
+                        <option *ngFor="let restaurante of restaurantes" [ngValue]="restaurante.Id_Restaurante">{{restaurante.Nome_Restaurante}}</option>
+                    </select>
+                </div>
+            </div>
+
+        </div>
+
+        <br />
+
+        <div class="row">
+            <div class="col-md-3">
+                <a [routerLink]="['/prato']"><button type="button" class="btn btn-danger">Cancelar</button></a>
+                <button type="submit" class="btn btn-info">Alterar</button>
+            </div>
+        </div>
+
+        <br />
+
+        <p *ngIf="mensagem.length" class="alert alert-success">{{mensagem}}</p>
+
+    </form>
+</div>

@@ -1,0 +1,59 @@
+ .navbar-cedro .navbar-brand {
+    color: rgba(255, 255, 255, 1) ;
+}
+ .navbar-cedro {
+    font-size: 14px ;
+    background-color: #000 ;
+    border-width: 1px ;
+    border-radius: 4px ;
+}
+ .navbar-cedro .navbar-nav>li>a {
+    color: rgba(255, 255, 255, 1) ;
+    background-color: rgba(248, 248, 248, 0) ;
+}
+ .navbar-cedro .navbar-nav>li>a:hover,
+ .navbar-cedro .navbar-nav>li>a:focus {
+    color: rgba(51, 51, 51, 1) ;
+    background-color: rgba(248, 248, 248, 1) ;
+}
+ .navbar-cedro .navbar-nav>.active>a,
+ .navbar-cedro .navbar-nav>.active>a:hover,
+ .navbar-cedro .navbar-nav>.active>a:focus {
+    color: rgba(85, 85, 85, 1) ;
+    background-color: rgba(231, 231, 231, 1) ;
+}
+ .navbar-cedro .navbar-toggle {
+    border-color: #ddd ;
+}
+ .navbar-cedro .navbar-toggle:hover,
+ .navbar-cedro .navbar-toggle:focus {
+    background-color: #ddd ;
+}
+ .navbar-cedro .navbar-toggle .icon-bar {
+    background-color: #888 ;
+}
+ .navbar-cedro .navbar-toggle:hover .icon-bar,
+ .navbar-cedro .navbar-toggle:focus .icon-bar {
+    background-color: #000000 ;
+}
+
+ tr {
+ border-radius: 1px 1px 1px 1px;
+ -moz-border-radius: 1px 1px 1px 1px;
+ -webkit-border-radius: 1px 1px 1px 1px;
+ border: 1px solid #000000;
+}
+
+tr.cedro-top {
+ background-color: #000;
+ color: #FFF;
+ font-weight: bold;
+ font-size: 18px;
+}
+
+tr.cedro-line {
+ background-color: #FFFAF0;
+ color: #000;
+ font-weight: 200;
+ font-size: 15px;
+}

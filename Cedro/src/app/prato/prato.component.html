@@ -1,0 +1,24 @@
+﻿<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="table-responsive">
+                <table class="table table-bordered">
+                    <tbody>
+                        <tr class="active">
+                            <th>Pratos</th>
+                            <th>Valor</th>
+                            <th>Restaurante</th>
+                            <th class="text=center" class="text-center">Menu</th>
+                        </tr>
+                        <tr *ngFor="let prato of pratos">
+                            <td>{{prato.Nome_Prato}}</td>
+                            <td>{{prato.Preco_Prato}}</td>
+                            <td>{{prato.Restaurante.Nome_Restaurante}}</td>
+                            <td class="text-center">#</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>

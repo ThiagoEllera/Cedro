@@ -1,0 +1,40 @@
+﻿<div class="container">
+    <div class="row">
+        <div class="col-md-1">
+            <a [routerLink]="['/restaurante/registrar']"><button type="button" class="btn btn-info">Cadastrar</button></a>
+        </div>
+        <div class="col-md-5">
+            <input class="form-control" #textoRestaurante (keyup)="0" placeholder="Pesquisar restaurante" />
+
+        </div>
+    </div>
+
+    <br />
+
+    <p *ngIf="mensagem.length" class="alert alert-info">{{mensagem}}</p>
+
+
+    <div class="row">
+        <div class="col-md-12">
+            <div class="table-responsive">
+                <table class="table table-bordered">
+                    <tbody>
+                        <tr class="cedro-top">
+                            <th title="Número" class="text-center">Nº </th>
+                            <th>Restaurantes</th>
+                            <th class="text=center" class="text-center">Função</th>
+                        </tr>
+                        <tr class="cedro-line" *ngFor="let restaurante of (restaurantes | filtroPorNomeRestaurante: textoRestaurante.value )">
+                            <td class="text-center">{{restaurante.Id_Restaurante}}</td>
+                            <td>{{restaurante.Nome_Restaurante}}</td>
+                            <td class="text-center">
+                                <a [routerLink]="['/restaurante/alterar', restaurante.Id_Restaurante]"><button class="btn btn-info"><i class="fa fa-pencil" aria-hidden="true"></i></button></a>
+                                <button class="btn btn-danger" (click)="excluir(restaurante)"><i class="fa fa-minus" aria-hidden="true"></i></button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
